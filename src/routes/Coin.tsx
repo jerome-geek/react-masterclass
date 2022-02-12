@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import {
     Link,
     Route,
@@ -84,6 +83,7 @@ const Loader = styled.span`
     text-align: center;
     display: block;
 `;
+
 interface RouteParams {
     coinId: string;
 }
@@ -280,7 +280,7 @@ const Coin = () => {
                             <Price />
                         </Route>
                         <Route path={`/${coinId}/chart`}>
-                            <Chart />
+                            <Chart coinId={coinId} />
                         </Route>
                     </Switch>
                 </>
